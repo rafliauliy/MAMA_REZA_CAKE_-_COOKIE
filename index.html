@@ -1070,15 +1070,40 @@
 
       // ===== PRODUK KATEGORI AKTIF =====
       const activeProducts = {
-        cat1: [ // Bolu & Cake
-          {id:"bolu-pisang", name:"Bolu Pisang", price:35000, img:"bolu_pisang.png", desc:"Bolu Pisang", detail:"Bolu pisang lembut & harum, cocok camilan sehat untuk keluarga. Dibuat dari pisang segar pilihan dengan tekstur yang mengempuk. Cocok untuk suguhan atau hampers.", weight:"350gr / loaf"},
-          {id:"bolu-cokelat", name:"Bolu Cokelat", price:40000, img:"bolu_cokelat.png", desc:"Bolu Cokelat", detail:"Bolu cokelat premium dengan rasa cokelat yang kaya. Lembut, legit, dan memuaskan untuk pecinta cokelat. Cocok untuk kado atau hantaran istimewa.", weight:"350gr / loaf"},
-          {id:"sponge-cake", name:"Sponge Cake", price:45000, img:"sponge_cake.png", desc:"Sponge Cake", detail:"Sponge cake lembut dengan tekstur yang sempurna. Bisa dijadikan dasar cake custom atau dimakan langsung dengan selai favorit Anda.", weight:"400gr / loaf"},
+        cat1: [
+          {
+            id:"bolu-pisang",
+            name:"Bolu Pisang",
+            price:35000,
+            img:"bolu_pisang.png",
+            desc:"Bolu Pisang",
+            detail:"Bolu pisang lembut & harum, cocok camilan sehat untuk keluarga. Dibuat dari pisang segar pilihan dengan tekstur yang mengempuk. Cocok untuk suguhan atau hampers.",
+            weight:"350gr / loaf",
+            available:true
+          },
+          {
+            id:"bolu-cokelat",
+            name:"Bolu Cokelat",
+            price:40000,
+            img:"bolu_cokelat.png",
+            desc:"Bolu Cokelat",
+            detail:"Bolu cokelat premium dengan rasa cokelat yang kaya. Lembut, legit, dan memuaskan untuk pecinta cokelat. Cocok untuk kado atau hantaran istimewa.",
+            weight:"350gr / loaf",
+            available:false // 🔥 COMING SOON
+          }
         ],
-        cat2: [ // Brownies & Cookies Premium
-          {id:"brownies-lumer", name:"Brownies Lumer", price:45000, img:"brownis.png", desc:"Brownies", detail:"Brownies cokelat lumer dengan tekstur yang sangat moist. Cokelat premium yang terasa di setiap gigitan. Cocok untuk kado atau suguhan spesial.", weight:"400gr / box"},
-          {id:"cookies-coklat", name:"Cookies Coklat Chips", price:35000, img:"chocochips.png", desc:"Cookies", detail:"Cookies coklat chips renyah dan lumer. Dibuat dengan cokelat premium dan butter berkualitas. Camilan sempurna untuk dinikmati kapan saja.", weight:"250gr / pack"},
-          {id:"peanut-butter-cookies", name:"Peanut Butter Cookies", price:38000, img:"peanut_cookie.png", desc:"Peanut Cookies", detail:"Cookies peanut butter dengan rasa kuat dan tekstur renyah. Dibuat dari peanut butter premium tanpa pengawet. Favorit keluarga yang nagih!", weight:"250gr / pack"},
+      
+        cat2: [
+          {
+            id:"brownies-lumer",
+            name:"Brownies Lumer",
+            price:45000,
+            img:"brownis.png",
+            desc:"Brownies",
+            detail:"Brownies cokelat lumer dengan tekstur yang sangat moist. Cokelat premium yang terasa di setiap gigitan. Cocok untuk kado atau suguhan spesial.",
+            weight:"400gr / box",
+            available:false // 🔥 disable
+          }
         ]
       };
 
@@ -1506,6 +1531,7 @@
   </script>
 </body>
 </html>
+
 
 
 
