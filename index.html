@@ -1,0 +1,1501 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mama Reza Cake & Cookies — Ramadhan & Lebaran</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <meta name="description" content="Mama Reza Cake & Cookies — Koleksi kue lebaran: Nastar Keju, Kaasstengels, Kue Semprit dan lainnya. Pesan cepat via WhatsApp." />
+
+  <style>
+    :root{
+      --sage:#B6CBB3;
+      --sage-dark:#8EA88A;
+      --gold:#D4AF37;
+      --white:#ffffff;
+      --bg:#F7FBF6;
+      --muted:#6B6B6B;
+      --card-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:"Poppins", system-ui;
+      background-color:#FBFDFB;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23B6CDBF' stroke-width='1.2' opacity='0.5'%3E%3Cpath d='M50 0 L65 35 L100 50 L65 65 L50 100 L35 65 L0 50 L35 35 Z'/%3E%3Ccircle cx='50' cy='50' r='10'/%3E%3C/g%3E%3C/svg%3E");
+      background-size:100px 100px;
+    }
+
+    /* Container */
+    .container{
+      width:95%;
+      max-width:1100px;
+      margin:0 auto;
+    }
+
+    /* Header */
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:18px 0;
+      position:sticky;
+      top:0;
+      backdrop-filter: blur(6px);
+      z-index:50;
+    }
+    .brand-section{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      cursor:default;
+    }
+    .logo{
+      width:56px;
+      height:56px;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:var(--card-shadow);
+    }
+
+    .logo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .brand h1{
+      margin:0;
+      font-family:"Playfair Display", serif;
+      font-size:18px;
+      letter-spacing:0.4px;
+      color:#14321f;
+    }
+    .brand p{
+      margin:0;
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    .nav-three-dot {
+      background:transparent;
+      border:none;
+      font-size:28px;
+      color:#11411f;
+      cursor:pointer;
+      transition: color .2s, transform .2s;
+      padding:8px;
+    }
+    .nav-three-dot:hover{ 
+      color:var(--sage-dark);
+      transform: scale(1.1);
+    }
+
+    .cart-btn{
+      position:relative;
+      background:transparent;
+      border:1px solid rgba(0,0,0,0.06);
+      padding:10px 12px;
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      cursor:pointer;
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+    .cart-btn:hover{ transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.08); }
+    .cart-count{
+      background:var(--gold);
+      color:#fff;
+      font-weight:600;
+      padding:4px 8px;
+      border-radius:999px;
+      font-size:13px;
+      box-shadow:0 6px 12px rgba(0,0,0,0.08);
+    }
+
+    /* Hero */
+    .hero{
+      display:flex;
+      gap:28px;
+      align-items:center;
+      margin:22px 0;
+      padding:22px;
+      border-radius:18px;
+      background:linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0.9));
+      box-shadow: var(--card-shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .hero-left{
+      flex:1;
+      min-width:220px;
+    }
+    .hero h2{
+      margin:0 0 10px 0;
+      font-family:"Playfair Display", serif;
+      font-size:28px;
+      color:#11321f;
+      letter-spacing:0.2px;
+      line-height:1.05;
+    }
+    .hero p.lead{
+      margin:0 0 16px 0;
+      color:var(--muted);
+    }
+    .hero .cta{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .btn{
+      border:none;
+      cursor:pointer;
+      padding:10px 16px;
+      border-radius:10px;
+      font-weight:600;
+      transition:transform .15s ease, box-shadow .15s ease;
+    }
+    .btn-primary{
+      background:linear-gradient(90deg,var(--sage-dark),var(--sage));
+      color:var(--white);
+      box-shadow:0 8px 24px rgba(138, 165, 137, 0.18);
+    }
+    .btn-ghost{
+      background:transparent;
+      border:1px solid rgba(17,50,31,0.08);
+      color:#14321f;
+    }
+    .hero-right{
+      width:320px;
+      max-width:45%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      position:relative;
+      transform:translateZ(0);
+    }
+    .product-card{
+      width:300px;
+      border-radius:14px;
+      overflow:hidden;
+      background:white;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      transform:translateY(0);
+      transition:transform .35s cubic-bezier(.2,.9,.3,1);
+    }
+    .product-card:hover{ transform:translateY(-10px) rotate(-1deg); }
+    .product-card img{ 
+      width:100%; 
+      aspect-ratio: 4/5;
+      object-fit:cover; 
+      display:block; 
+    }
+    .product-card .pc-body{ padding:12px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .badge{
+      background:linear-gradient(90deg,var(--gold),#f1d58b);
+      color:#1a1a1a;
+      padding:6px 10px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:12px;
+    }
+
+    /* Catalog grid */
+    .catalog{
+      margin-top:28px;
+    }
+    .catalog h3{ font-family:"Playfair Display", serif; margin:6px 0 12px 0; color:#11321f; }
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3,1fr);
+      gap:14px;
+    }
+    .card{
+      background:var(--white);
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:var(--card-shadow);
+      transition:transform .18s ease;
+    }
+    .card:hover{ transform:translateY(-8px); }
+    .card img{ 
+      width:100%; 
+      aspect-ratio: 4/5;
+      object-fit:cover; 
+      display:block; 
+    }
+    .card .card-body{ padding:10px 12px; display:flex; align-items:center; justify-content:space-between; gap:8px; }
+    .card .info{flex:1}
+    .card .name{ font-weight:600; color:#14321f; font-size:15px; margin-bottom:6px }
+    .card .meta{font-size:13px; color:var(--muted)}
+    .card .price{ font-weight:700; color:#1a3a2a; }
+    .card .add{
+      background:linear-gradient(135deg, var(--sage), var(--sage-dark));
+      border:none;
+      color:var(--white);
+      padding:8px 12px;
+      border-radius:8px;
+      cursor:pointer;
+      font-weight:600;
+      transition:
+        transform .15s ease,
+        box-shadow .15s ease,
+        background .2s ease;
+    }
+
+    .card .add:hover{
+      transform:translateY(-3px);
+      box-shadow:0 10px 22px rgba(138,165,137,0.35);
+    }
+
+    .card .add:active{
+      transform:translateY(0) scale(0.96);
+      box-shadow:0 4px 10px rgba(138,165,137,0.25);
+    }
+
+    .detail-btn{
+      background:transparent;
+      border:none;
+      font-size:23px;
+      cursor:pointer;
+      padding:0;
+      margin-left:8px;
+      color:#888;
+      transition: color .2s ease;
+    }
+    .detail-btn:hover{ color:#11321f; }
+
+    /* Coming Soon Section */
+    .coming-soon-section {
+      margin-top:28px;
+      padding:40px 22px;
+      border-radius:18px;
+      background:linear-gradient(135deg, rgba(182,203,179,0.08), rgba(212,175,55,0.06));
+      border: 2px dashed var(--sage);
+      text-align:center;
+      box-shadow: var(--card-shadow);
+    }
+    .coming-soon-section h3 {
+      font-family:"Playfair Display", serif;
+      color:#11321f;
+      font-size:24px;
+      margin:0 0 12px 0;
+    }
+    .coming-soon-section p {
+      color:var(--muted);
+      margin:0;
+      font-size:15px;
+    }
+    .coming-soon-emoji {
+      font-size:48px;
+      margin-bottom:12px;
+      display:block;
+    }
+
+    /* Modal popup */
+    .overlay {
+      position:fixed;
+      top:0; left:0; right:0; bottom:0;
+      background: rgba(44,36,38,0.4);
+      z-index:1000;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      backdrop-filter: blur(2px);
+    }
+    .overlay.active { display:flex; }
+    .modal {
+      background: #fff;
+      border-radius:16px;
+      box-shadow: 0 18px 60px rgba(0,0,0,0.18);
+      max-width:380px; 
+      width:94%;
+      padding: 24px 22px 18px;
+      position: relative;
+      animation: fadeup .35s cubic-bezier(.2,.9,.3,1);
+    }
+    .modal .close-modal {
+      position: absolute;
+      top:14px; right:18px;
+      border:none;
+      background:transparent;
+      font-size:28px; 
+      color:#999;
+      cursor:pointer;
+      font-weight:bold;
+      transition: color .2s ease;
+    }
+    .modal .close-modal:hover { color:#11321f; }
+    .detail-img {
+      aspect-ratio: 4/5;
+      width:100%;
+      border-radius: 14px;
+      margin-bottom: 16px;
+      object-fit: cover;
+      display: block;
+    }
+    .modal h4 {
+      font-family: "Playfair Display", serif;
+      margin:0 0 8px 0;
+      color: #11321f;
+      font-size: 20px;
+    }
+    .modal .badge { 
+      display: inline-block;
+      margin-bottom:12px;
+    }
+    .modal .detail-desc { 
+      color: #6b6b6b; 
+      font-size:14px; 
+      margin-bottom:12px;
+      line-height: 1.5;
+    }
+    .modal .detail-weight { 
+      font-size:13px; 
+      color:#888;
+      margin-bottom: 10px;
+    }
+    .modal .detail-price { 
+      font-weight:700; 
+      color:#11411f; 
+      font-size: 20px;
+      margin:12px 0 14px;
+    }
+    .modal .add-modal { 
+      width: 100%;
+      padding:12px 16px; 
+      border-radius:10px; 
+      background:linear-gradient(90deg,var(--sage-dark),var(--sage)); 
+      color:#fff; 
+      border:none; 
+      font-weight:600; 
+      cursor:pointer;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .modal .add-modal:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(138,165,137,0.3);
+    }
+    .modal .add-modal:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    /* About Us Modal */
+    #aboutOverlay {
+      position: fixed;
+      top:0; left:0;
+      width:100vw; height:100vh;
+      background: rgba(44,36,38,0.4);
+      z-index: 1100;
+      display:none;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(2px);
+    }
+    #aboutOverlay.active { display: flex; }
+    #aboutModal {
+      background:#fff;
+      border-radius:16px;
+      padding:32px 22px 24px;
+      max-width:380px;
+      width:94%;
+      box-shadow: 0 18px 60px rgba(0,0,0,0.19);
+      position:relative;
+      animation:fadeup .35s cubic-bezier(.2,.9,.3,1);
+    }
+    #aboutModal .close-about {
+      position:absolute;top:15px;right:18px;
+      border:none;background:transparent;
+      font-size:28px;color:#999;cursor:pointer;transition: color .2s;
+    }
+    #aboutModal .close-about:hover{ color:#11321f; }
+    #aboutModal h4 {
+      font-family:"Playfair Display",serif; 
+      color:#11321f;
+      font-size:22px;
+      margin:0 0 16px 0;
+    }
+    #aboutModal p { 
+      color:#6B6B6B; 
+      font-size:15px; 
+      margin:0;
+      line-height: 1.6;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      margin-top:40px;
+      padding:32px 22px;
+      border-radius:18px;
+      background:linear-gradient(135deg, rgba(182,203,179,0.12), rgba(255,255,255,0.5));
+      border: 2px solid var(--sage);
+      box-shadow: var(--card-shadow);
+    }
+    .contact-section h3 {
+      font-family:"Playfair Display", serif;
+      color:#11321f;
+      font-size:22px;
+      margin:0 0 20px 0;
+      text-align:center;
+    }
+    .contact-grid {
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:20px;
+      margin-bottom:20px;
+    }
+    .contact-item {
+      background:#fff;
+      padding:18px;
+      border-radius:12px;
+      text-align:center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .contact-item:hover {
+      background-color: #f0f0f0;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .contact-item:active {
+      transform: translateY(0);
+      background-color: #e0e0e0;
+    }
+    .contact-item .icon {
+      font-size:32px;
+      margin-bottom:10px;
+      display:block;
+    }
+    .contact-item .label {
+      font-weight:600;
+      color:#11321f;
+      font-size:13px;
+      margin-bottom:8px;
+    }
+    .contact-item .value {
+      color:var(--muted);
+      font-size:14px;
+      word-break: break-all;
+    }
+    .contact-item .value a {
+      color:var(--sage-dark);
+      text-decoration:none;
+      font-weight:600;
+      transition: color .2s;
+    }
+    .contact-item .value a:hover {
+      color:var(--gold);
+    }
+    .copy-hint {
+      text-align:center;
+      color:#999;
+      font-size:12px;
+      margin-top:14px;
+      font-style:italic;
+    }
+
+    /* Cart drawer */
+    .drawer{
+      position:fixed;
+      right:20px;
+      bottom:100px;
+      width:360px;
+      max-width:94%;
+      background:white;
+      border-radius:14px;
+      box-shadow:0 30px 80px rgba(0,0,0,0.12);
+      padding:12px;
+      transform:translateY(110%);
+      opacity:0;
+      transition:transform .36s cubic-bezier(.2,.9,.3,1), opacity .3s ease, bottom .36s cubic-bezier(.2,.9,.3,1);
+      z-index:80;
+    }
+    .drawer.open{ transform:translateY(0); opacity:1; }
+    .drawer h4{ margin:6px 0 10px 0; font-family:"Playfair Display", serif; color:#14321f; }
+    .cart-list{ max-height:320px; overflow:auto; padding-right:6px; }
+    .cart-item{
+      display:flex;
+      gap:8px;
+      align-items:center;
+      padding:8px 6px;
+      border-bottom:1px dashed #efefef;
+    }
+    .cart-item img{ 
+      width:60px; 
+      height:75px; 
+      object-fit:cover; 
+      border-radius:8px; 
+      aspect-ratio: 4/5;
+    }
+    .ci-info{flex:1}
+    .ci-name{ font-weight:600; font-size:14px; margin-bottom:6px; }
+    .ci-qty{ display:flex; gap:8px; align-items:center; }
+    .qty-btn{
+      border:none;
+      background:#f0f0f0;
+      padding:6px 8px;
+      border-radius:8px;
+      cursor:pointer;
+      transition: background .2s ease;
+    }
+    .qty-btn:hover { background:#e0e0e0; }
+    .total-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      margin-top:10px;
+      font-weight:700;
+      padding-top:10px;
+      border-top:1px solid #f1f1f1;
+    }
+    .whatsapp{
+      display:block;
+      width:100%;
+      background:linear-gradient(90deg,#25D366,#128C7E);
+      color:white;
+      border:none;
+      padding:12px;
+      margin-top:10px;
+      border-radius:10px;
+      cursor:pointer;
+      font-weight:700;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .whatsapp:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(37,211,102,0.3);
+    }
+    .remove-btn{
+      border:none;
+      background:#ffecec;
+      color:#c0392b;
+      padding:6px 8px;
+      border-radius:8px;
+      cursor:pointer;
+      font-size:12px;
+      font-weight:600;
+      transition:background .15s ease, transform .15s ease;
+    }
+    .remove-btn:hover{
+      background:#ffd6d6;
+      transform:scale(1.05);
+    }
+
+    /* Floating Cart Button */
+    .floating-cart-btn {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      background: linear-gradient(90deg, var(--sage-dark), var(--sage));
+      color: var(--white);
+      border: none;
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(138, 165, 137, 0.18);
+      font-size: 22px;
+      padding: 13px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 90;
+      cursor: pointer;
+      transition: transform .18s, box-shadow .18s;
+      font-weight: 600;
+    }
+    .floating-cart-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(138,165,137,0.28);
+    }
+    .floating-cart-btn:active {
+      transform: translateY(-1px);
+    }
+
+    /* footer */
+    footer{ margin-top:40px; text-align:center; color:var(--muted); font-size:13px; padding:40px 0 10px 0; }
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{ flex-direction:column; gap:16px; padding:16px; }
+      .hero-right{ width:100%; max-width:100%;}
+      .grid{ grid-template-columns: repeat(2,1fr); }
+      .contact-grid { grid-template-columns: repeat(2, 1fr); }
+      .drawer{ width:calc(100% - 40px); right:20px; }
+    }
+    @media (max-width:520px){
+      .brand h1{ font-size:16px }
+      .hero h2{ font-size:22px }
+      .grid{ grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .modal { max-width: 90%; }
+      #aboutModal { max-width: 90%; }
+      .floating-cart-btn { padding: 12px 14px; font-size: 18px; }
+    }
+
+    /* subtle enter animation for elements */
+    .fade-up{
+      opacity:0;
+      transform:translateY(10px);
+      animation:fadeup .7s forwards;
+    }
+    @keyframes fadeup{
+      to{ opacity:1; transform:translateY(0); }
+    }
+
+    /* How To Order Modal */
+    #howToOrderOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(44, 36, 38, 0.4);
+      z-index: 1100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(2px);
+    }
+
+    #howToOrderOverlay.active {
+      display: flex;
+    }
+
+    #howToOrderModal {
+      background: #fff;
+      border-radius: 16px;
+      padding: 32px 22px 24px;
+      max-width: 420px;
+      width: 94%;
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.19);
+      position: relative;
+      animation: fadeup 0.35s cubic-bezier(0.2, 0.9, 0.3, 1);
+      max-height: 85vh;
+      overflow-y: auto;
+    }
+
+    #howToOrderModal .close-about {
+      position: absolute;
+      top: 15px;
+      right: 18px;
+      border: none;
+      background: transparent;
+      font-size: 28px;
+      color: #999;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    #howToOrderModal .close-about:hover {
+      color: #11321f;
+    }
+
+    #howToOrderModal h4 {
+      font-family: "Playfair Display", serif;
+      color: #11321f;
+      font-size: 22px;
+      margin: 0 0 16px 0;
+    }
+
+    @media (max-width: 520px) {
+      #howToOrderModal {
+        max-width: 90%;
+        padding: 24px 18px 20px;
+      }
+      
+      #howToOrderModal h4 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="container" role="banner">
+    <div class="brand-section">
+      <div class="brand" aria-hidden="false">
+        <div class="logo">
+          <img src="file:///D:/File%20Rafli/Aplikasi%20Mamah/gambar/logo.png.png" alt="Mama Reza Logo">
+        </div>
+        <div>
+          <h1>Mama Reza</h1>
+          <p>Cake & Cookies — Ramadhan & Lebaran</p>
+        </div>
+      </div>
+      <button class="nav-three-dot" id="aboutBtn" aria-label="Tentang Kami" title="Tentang Mama Reza Cake & Cookies">⋯</button>
+    </div>
+
+    <button class="cart-btn" id="openCartBtn" aria-label="Buka Keranjang">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M6 6h15l-1.5 9h-12z" stroke="#11321f" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="10" cy="20" r="1" fill="#11321f"></circle>
+        <circle cx="18" cy="20" r="1" fill="#11321f"></circle>
+      </svg>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main class="container" role="main">
+    <!-- Hero -->
+    <section class="hero fade-up" style="animation-delay:.1s">
+      <div class="hero-left">
+        <h2>Nastar Keju — Pilihan Unggulan Lebaran</h2>
+        <p class="lead">Manisnya pas, gurih keju asli, lembut di setiap gigitan. Cocok untuk hantaran lebaran keluarga.</p>
+        <div class="cta">
+          <button class="btn btn-primary" id="addHeroBtn">Tambah ke Keranjang</button>
+          <button class="btn btn-ghost" id="toCatalog">Lihat Katalog</button>
+          <button class="btn btn-ghost" id="toHowToOrder">Cara Pesan</button>
+        </div>
+      </div>
+      <div class="hero-right" aria-hidden="true">
+        <article class="product-card" title="Nastar Keju — Unggulan">
+          <img src="file:///D:/File%20Rafli/Aplikasi%20Mamah/nastar_keju.png" alt="Nastar Keju — Mama Reza">
+          <div class="pc-body">
+            <div>
+              <div style="font-weight:700;">Nastar Keju</div>
+              <div style="font-size:13px;color:#666">250gr / pack</div>
+            </div>
+            <div style="text-align:right">
+              <div class="badge">Unggulan</div>
+              <div style="margin-top:8px;font-weight:700;color:#11411f">Rp 40.000</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Catalog Utama -->
+    <section class="catalog fade-up" style="animation-delay:.2s">
+      <h3>Katalog Produk Unggulan</h3>
+      <div class="grid" id="productGrid" role="list">
+        <!-- Cards rendered by JS -->
+      </div>
+    </section>
+
+    <!-- Produk Bolu & Cake (ACTIVE) -->
+    <section class="catalog fade-up" style="animation-delay:.22s">
+      <h3>🍌 Bolu & Cake</h3>
+      <div class="grid" id="categoryGrid1" role="list"></div>
+    </section>
+
+    <!-- Produk Brownies & Cookies (ACTIVE) -->
+    <section class="catalog fade-up" style="animation-delay:.24s">
+      <h3>🍫 Brownies & Cookies Premium</h3>
+      <div class="grid" id="categoryGrid2" role="list"></div>
+    </section>
+
+    <!-- Coming Soon Section 3 -->
+    <section class="coming-soon-section fade-up" style="animation-delay:.26s">
+      <span class="coming-soon-emoji">🥜</span>
+      <h3>Makanan Tradisional & Renyah</h3>
+      <p>Kategori ini segera tersedia. Nantikan produk-produk pilihan Mama Reza untuk Anda!</p>
+    </section>
+
+    <!-- Coming Soon Section 4 -->
+    <section class="coming-soon-section fade-up" style="animation-delay:.28s">
+      <span class="coming-soon-emoji">🍰</span>
+      <h3>Kue Spesial Musiman</h3>
+      <p>Kategori ini segera tersedia. Nantikan produk-produk pilihan Mama Reza untuk Anda!</p>
+    </section>
+
+    <!-- Coming Soon Section 5 -->
+    <section class="coming-soon-section fade-up" style="animation-delay:.30s">
+      <span class="coming-soon-emoji">🎂</span>
+      <h3>Pilihan Camilan Keluarga</h3>
+      <p>Kategori ini segera tersedia. Nantikan produk-produk pilihan Mama Reza untuk Anda!</p>
+    </section>
+
+    <!-- Coming Soon Section 6 -->
+    <section class="coming-soon-section fade-up" style="animation-delay:.32s">
+      <span class="coming-soon-emoji">✨</span>
+      <h3>Edisi Terbatas & Seasonal</h3>
+      <p>Kategori ini segera tersedia. Nantikan produk-produk pilihan Mama Reza untuk Anda!</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section fade-up" style="animation-delay:.34s">
+      <h3>📬 Hubungi Kami</h3>
+      <div class="contact-grid">
+        <a href="https://www.google.com/maps/search/?api=1&query=Kp.+Karangge,+Desa+Bandulu,+Kec.+Anyar,+Kab.+Serang,+Banten+42166" target="_blank" style="text-decoration: none; color: inherit;">
+          <div class="contact-item" id="maps-trigger">
+            <span class="icon">📍</span>
+            <div class="label">Alamat Lengkap</div>
+            <div class="value">
+                Kp. Karangge, 003/007, Desa Bandulu, Kec. Anyar, Kab. Serang, Banten 42166
+            </div>
+        </div>
+        </a>
+        <div class="contact-item">
+          <span class="icon">📱</span>
+          <div class="label">Nomor WhatsApp</div>
+          <div class="value">
+            <a href="https://wa.me/0895391639541" target="_blank">0895 3916 39541</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="icon">✉️</span>
+          <div class="label">Email</div>
+          <div class="value"> 
+            <a href="mailto:rafliauliya26@gmail.com">rafliauliya26@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Floating Cart Button -->
+  <button class="floating-cart-btn" id="floatingCartBtn" aria-label="Buka Keranjang">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M6 6h15l-1.5 9h-12z" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="10" cy="20" r="1" fill="#fff"></circle>
+      <circle cx="18" cy="20" r="1" fill="#fff"></circle>
+    </svg>
+    <span id="floatingCartCount">0</span>
+  </button>
+
+  <!-- Modal Detail Produk -->
+  <div class="overlay" id="detailOverlay" role="dialog" aria-hidden="true">
+    <div class="modal" id="modalContent">
+      <!-- Konten detail di JS -->
+    </div>
+  </div>
+
+  <!-- Modal Tentang Kami -->
+  <div id="aboutOverlay" role="dialog" aria-hidden="true">
+    <div id="aboutModal">
+      <button class="close-about" id="closeAboutBtn" aria-label="Tutup">&times;</button>
+      <h4>Tentang Kami</h4>
+      <p>Mama Reza Cake & Cookies telah berdiri sejak tahun 2015, dengan pengalaman lebih dari 9 tahun melayani keluarga Indonesia. Kami berspesialisasi dalam pembuatan kue lebaran, cake, dan cookies premium dengan resep turun-temurun dan bahan-bahan berkualitas tinggi.</p>
+      <p style="margin-top:12px">Produk kami cocok untuk hampers, hantaran, dan suguhan pesta keluarga. Setiap produk dibuat fresh setiap hari dengan penuh cinta dan dedikasi untuk kepuasan pelanggan. Ramadhan & Lebaran lebih spesial bersama Mama Reza! 🙏</p>
+    </div>
+  </div>
+
+  <!-- Modal Cara Pesan -->
+<div id="howToOrderOverlay" role="dialog" aria-hidden="true">
+  <div id="howToOrderModal">
+    <button class="close-about" id="closeHowToOrderBtn" aria-label="Tutup">&times;</button>
+    <h4>📋 Cara Pesan</h4>
+    
+    <div style="margin-top: 16px;">
+      <div style="margin-bottom: 16px;">
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px;">
+          <span style="background: var(--sage); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">1</span>
+          <div>
+            <p style="margin: 0 0 4px 0; font-weight: 600; color: #11321f;">Pilih Produk dari Katalog</p>
+            <p style="margin: 0; font-size: 13px; color: #6B6B6B; line-height: 1.5;">Jelajahi katalog lengkap kami dan klik tombol "Tambah" atau lihat detail produk untuk informasi lebih lanjut.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 16px;">
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px;">
+          <span style="background: var(--sage); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">2</span>
+          <div>
+            <p style="margin: 0 0 4px 0; font-weight: 600; color: #11321f;">Masukkan ke Keranjang</p>
+            <p style="margin: 0; font-size: 13px; color: #6B6B6B; line-height: 1.5;">Klik tombol "Tambah" atau gunakan floating cart button di sudut kanan bawah untuk menambah produk ke keranjang.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 16px;">
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px;">
+          <span style="background: var(--sage); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">3</span>
+          <div>
+            <p style="margin: 0 0 4px 0; font-weight: 600; color: #11321f;">Cek Keranjang Anda</p>
+            <p style="margin: 0; font-size: 13px; color: #6B6B6B; line-height: 1.5;">Buka keranjang untuk melihat daftar produk, jumlah, dan total harga. Anda bisa menambah atau mengurangi jumlah item.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 16px; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+    <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; padding: 15px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #fcfcfc;">
+        <span style="background: #25D366; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">4</span>
+        <div>
+            <p style="margin: 0 0 6px 0; font-weight: 700; color: #11321f; font-size: 15px;">Konfirmasi Pesanan via WhatsApp</p>
+            <p style="margin: 0 0 10px 0; font-size: 13.5px; color: #4A4A4A; line-height: 1.6;">
+                Silakan masukkan <strong>Nama Lengkap</strong> Anda pada kolom yang tersedia di keranjang sebelum menekan tombol <strong>"Pesan via WhatsApp"</strong>. 
+            </p>
+            <p style="margin: 0; font-size: 13px; color: #6B6B6B; line-height: 1.5; font-style: italic; border-left: 3px solid #25D366; padding-left: 10px;">
+                Tim layanan pelanggan kami akan segera memverifikasi pesanan Anda, memberikan rincian total pembayaran, serta estimasi biaya pengiriman secara akurat.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+      <div style="margin-bottom: 16px;">
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px;">
+          <span style="background: var(--sage); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">5</span>
+          <div>
+            <p style="margin: 0 0 4px 0; font-weight: 600; color: #11321f;">Konfirmasi & Pembayaran</p>
+            <p style="margin: 0; font-size: 13px; color: #6B6B6B; line-height: 1.5;">Setelah konfirmasi, lakukan pembayaran sesuai metode yang ditentukan. Produk akan segera dikemas dan dikirim ke alamat Anda.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background: linear-gradient(135deg, rgba(182,203,179,0.1), rgba(212,175,55,0.08)); border-left: 4px solid var(--sage); padding: 12px; border-radius: 8px; margin-top: 20px;">
+      <p style="margin: 0; font-size: 13px; color: #6B6B6B; line-height: 1.6;">
+        <strong style="color: #11321f;">💡 Tips:</strong> Pesan sebelum tgl 20 Maret 2026 untuk memastikan pengiriman tepat waktu. Kami buka setiap hari dari jam 08:00 - 21:00.
+      </p>
+    </div>
+  </div>
+</div>
+
+  <!-- Cart Drawer -->
+  <aside class="drawer" id="cartDrawer" aria-hidden="true">
+    <h4>Keranjang Anda</h4>
+    <div class="cart-list" id="cartList">
+      <!-- items -->
+    </div>
+
+    <div class="total-row">
+      <div>Total Item</div>
+      <div id="cartTotalItems">0</div>
+    </div>
+
+    <div class="total-row">
+      <div>Total Harga</div>
+      <div id="cartTotalPrice">Rp 0</div>
+    </div>
+
+    <button class="whatsapp" id="checkoutBtn" title="Pesan via WhatsApp">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;margin-right:8px">
+        <path d="M21 11.5a8.5 8.5 0 1 1-15.2-6.2L3 3l3.3.8A8.5 8.5 0 0 1 21 11.5z" fill="rgba(255,255,255,0.2)"/>
+      </svg>
+      Pesan via WhatsApp
+    </button>
+
+    <button class="btn btn-ghost" id="closeCartBtn" style="margin-top:8px;width:100%">Tutup</button>
+  </aside>
+
+  <footer class="container fade-up" style="animation-delay:.36s; text-align: center;">
+      <p>© <span id="year"></span> Mama Reza Cake & Cookies — Selamat Menunaikan Ibadah Puasa & Selamat Hari Raya.</p>
+      <p style="margin-top: 5px;">Website dibuat dengan ❤️ oleh Rafli Auliya. Semua hak cipta dilindungi undang-undang.</p>
+  </footer>
+
+  <script>
+    (function(){
+      // ===== PRODUCTS DATA (EDIT SECTION) =====
+      const products = [
+        { 
+          id: 'nastar-keju', 
+          name: 'Nastar Keju', 
+          price: 40000, 
+          img: 'file:///D:/File%20Rafli/Aplikasi%20Mamah/nastar_keju.png', 
+          desc: 'Unggulan',
+          detail: 'Nastar dengan keju asli pilihan, tekstur lembut dan manis gurih yang sempurna. Cocok untuk hantaran Lebaran atau suguhan istimewa keluarga. Dibuat fresh setiap hari dengan bahan premium.',
+          weight: '250gr / pack'
+        },
+        { 
+          id: 'kaasstengels', 
+          name: 'Kaasstengels (Kue Keju)',
+          price: 40000, 
+          img: 'file:///D:/File%20Rafli/Aplikasi%20Mamah/kastengel.png', 
+          desc: 'Kue Keju',
+          detail: 'Kaasstengels renyah dengan keju premium yang gurih. Aroma keju autentik memikat di setiap gigitan. Sempurna sebagai camilan atau oleh-oleh spesial.',
+          weight: '250gr / pack'
+        },
+        { 
+          id: 'kue-semprit', 
+          name: 'Kue Semprit', 
+          price: 40000, 
+          img: 'file:///D:/File%20Rafli/Aplikasi%20Mamah/semprit.png', 
+          desc: 'Favorit',
+          detail: 'Kue semprit klasik dengan aroma butter yang kaya dan tekstur ringan. Favorit anak-anak dan keluarga, cocok buat suguhan tamu atau hantaran.',
+          weight: '250gr / pack'
+        },
+        { 
+          id: 'kacang-goreng', 
+          name: 'Kacang Goreng', 
+          price: 35000, 
+          img: 'file:///D:/File%20Rafli/Aplikasi%20Mamah/kacang_goreng.png', 
+          desc: 'Best Seller',
+          detail: 'Kacang goreng gurih dan renyah yang bikin nagih. Dibuat dengan resep tradisional dan bumbu pilihan. Camilan sempurna kapan saja.',
+          weight: '250gr / pack'
+        },
+        { 
+          id: 'jelly-kering', 
+          name: 'Jelly Kering', 
+          price: 40000, 
+          img: 'file:///D:/File%20Rafli/Aplikasi%20Mamah/ager_kering.png', 
+          desc: 'Manis Segar',
+          detail: 'Jelly kering dengan warna-warni cerah dan rasa buah segar alami. Favorit anak-anak dan cocok untuk pesta. Aman dan lezat!',
+          weight: '220gr / pack'
+        },
+        { 
+          id: 'nastar-cokelat', 
+          name: 'Nastar Cokelat', 
+          price: 40000, 
+          img: 'file:///D:/File%20Rafli/Aplikasi%20Mamah/nastar_cokelat.png', 
+          desc: 'Choco',
+          detail: 'Nastar dengan isi cokelat premium yang kaya rasa. Tekstur lembut dengan kelezatan cokelat yang melumer di mulut. Pilihan untuk penikmat cokelat.',
+          weight: '250gr / pack'
+        },
+        { 
+          id: 'putri-salju', 
+          name: 'Putri Salju', 
+          price: 40000, 
+          img: 'file:///D:/File%20Rafli/Aplikasi%20Mamah/putri_salju.png', 
+          desc: 'Classic',
+          detail: 'Putri salju premium dengan tekstur lembut dan rasa manis yang pas. Bertabur gula halus yang indah. Kue klasik yang selalu jadi favorit.',
+          weight: '250gr / pack'
+        },
+        { 
+          id: 'kue-sagu-keju', 
+          name: 'Kue Sagu Keju', 
+          price: 40000, 
+          img: 'file:///D:/File%20Rafli/Aplikasi%20Mamah/sagu_keju.png', 
+          desc: 'Special',
+          detail: 'Kue sagu keju dengan tekstur renyah dan gurih yang sempurna. Leleh di mulut dengan cita rasa keju asli. Kue spesial untuk momen istimewa.',
+          weight: '250gr / pack'
+        }
+      ];
+
+      // ===== PRODUK KATEGORI AKTIF =====
+      const activeProducts = {
+        cat1: [ // Bolu & Cake
+          {id:"bolu-pisang", name:"Bolu Pisang", price:35000, img:"file:///D:/File%20Rafli/Aplikasi%20Mamah/bolu_pisang.png", desc:"Bolu Pisang", detail:"Bolu pisang lembut & harum, cocok camilan sehat untuk keluarga. Dibuat dari pisang segar pilihan dengan tekstur yang mengempuk. Cocok untuk suguhan atau hampers.", weight:"350gr / loaf"},
+          {id:"bolu-cokelat", name:"Bolu Cokelat", price:40000, img:"file:///D:/File%20Rafli/Aplikasi%20Mamah/bolu_cokelat.png", desc:"Bolu Cokelat", detail:"Bolu cokelat premium dengan rasa cokelat yang kaya. Lembut, legit, dan memuaskan untuk pecinta cokelat. Cocok untuk kado atau hantaran istimewa.", weight:"350gr / loaf"},
+          {id:"sponge-cake", name:"Sponge Cake", price:45000, img:"file:///D:/File%20Rafli/Aplikasi%20Mamah/sponge_cake.png", desc:"Sponge Cake", detail:"Sponge cake lembut dengan tekstur yang sempurna. Bisa dijadikan dasar cake custom atau dimakan langsung dengan selai favorit Anda.", weight:"400gr / loaf"},
+        ],
+        cat2: [ // Brownies & Cookies Premium
+          {id:"brownies-lumer", name:"Brownies Lumer", price:45000, img:"file:///D:/File%20Rafli/Aplikasi%20Mamah/brownis.png", desc:"Brownies", detail:"Brownies cokelat lumer dengan tekstur yang sangat moist. Cokelat premium yang terasa di setiap gigitan. Cocok untuk kado atau suguhan spesial.", weight:"400gr / box"},
+          {id:"cookies-coklat", name:"Cookies Coklat Chips", price:35000, img:"file:///D:/File%20Rafli/Aplikasi%20Mamah/chocochips.png", desc:"Cookies", detail:"Cookies coklat chips renyah dan lumer. Dibuat dengan cokelat premium dan butter berkualitas. Camilan sempurna untuk dinikmati kapan saja.", weight:"250gr / pack"},
+          {id:"peanut-butter-cookies", name:"Peanut Butter Cookies", price:38000, img:"file:///D:/File%20Rafli/Aplikasi%20Mamah/peanut_cookie.png", desc:"Peanut Cookies", detail:"Cookies peanut butter dengan rasa kuat dan tekstur renyah. Dibuat dari peanut butter premium tanpa pengawet. Favorit keluarga yang nagih!", weight:"250gr / pack"},
+        ]
+      };
+
+      // ===== DOM ELEMENTS =====
+      const grid = document.getElementById('productGrid');
+      const categoryGrids = {
+        cat1: document.getElementById('categoryGrid1'),
+        cat2: document.getElementById('categoryGrid2'),
+      };
+      const cartCountEl = document.getElementById('cartCount');
+      const cartDrawer = document.getElementById('cartDrawer');
+      const cartList = document.getElementById('cartList');
+      const cartTotalItemsEl = document.getElementById('cartTotalItems');
+      const cartTotalPriceEl = document.getElementById('cartTotalPrice');
+      const checkoutBtn = document.getElementById('checkoutBtn');
+      const openCartBtn = document.getElementById('openCartBtn');
+      const closeCartBtn = document.getElementById('closeCartBtn');
+      const addHeroBtn = document.getElementById('addHeroBtn');
+      const toCatalogBtn = document.getElementById('toCatalog');
+      const yearSpan = document.getElementById('year');
+      const detailOverlay = document.getElementById('detailOverlay');
+      const modalContent = document.getElementById('modalContent');
+      const floatingCartBtn = document.getElementById('floatingCartBtn');
+      const floatingCartCount = document.getElementById('floatingCartCount');
+      const aboutBtn = document.getElementById('aboutBtn');
+      const aboutOverlay = document.getElementById('aboutOverlay');
+      const closeAboutBtn = document.getElementById('closeAboutBtn');
+
+      yearSpan.textContent = new Date().getFullYear();
+
+      // LocalStorage key
+      const LS_KEY = 'mrc_cart_v1';
+
+      let cart = loadCart();
+
+      // ===== UTILITY FUNCTIONS =====
+      function formatPrice(n){
+        return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+      }
+
+      function saveCart(){
+        localStorage.setItem(LS_KEY, JSON.stringify(cart));
+        updateCartUI();
+        updateFloatingCart();
+      }
+
+      function loadCart(){
+        try{
+          const raw = localStorage.getItem(LS_KEY);
+          return raw ? JSON.parse(raw) : [];
+        }catch(e){
+          return [];
+        }
+      }
+
+      function findProduct(id){
+        let found = products.find(p=>p.id===id);
+        if(!found){
+          for(let cat in activeProducts){
+            found = activeProducts[cat].find(p=>p.id===id);
+            if(found) break;
+          }
+        }
+        return found;
+      }
+
+      // ===== CART OPERATIONS =====
+      function addToCart(id, qty = 1){
+        const p = findProduct(id);
+        if(!p) return;
+        const existing = cart.find(i=>i.id===id);
+        if(existing){
+          existing.qty += qty;
+        } else {
+          cart.push({ id: p.id, name: p.name, price: p.price, qty: qty, img: p.img });
+        }
+        saveCart();
+      }
+
+      function changeQty(id, delta){
+        const i = cart.find(x=>x.id===id);
+        if(!i) return;
+        i.qty = Math.max(0, i.qty + delta);
+        if(i.qty === 0) cart = cart.filter(x=>x.id!==id);
+        saveCart();
+      }
+
+      // ===== RENDER PRODUCTS =====
+      function renderProducts(){
+        grid.innerHTML = '';
+        products.forEach((p, idx) => {
+          const col = document.createElement('div');
+          col.className = 'card fade-up';
+          col.style.animationDelay = (0.05 + idx * 0.03) + 's';
+          col.innerHTML = `
+            <img src="${p.img}" alt="${p.name}">
+            <div class="card-body">
+              <div class="info">
+                <div class="name">${p.name}</div>
+                <div class="meta">${p.desc || 'Kue spesial'}</div>
+              </div>
+              <div style="text-align:right">
+                <div class="price">Rp ${formatPrice(p.price)}</div>
+                <div style="display:flex;gap:6px;margin-top:6px">
+                  <button class="add" data-id="${p.id}">Tambah</button>
+                  <button class="detail-btn" data-id="${p.id}" title="Detail Produk">⋯</button>
+                </div>
+              </div>
+            </div>
+          `;
+          grid.appendChild(col);
+        });
+
+        attachProductListeners();
+      }
+
+      // ===== RENDER ACTIVE PRODUCTS =====
+      function renderActiveProducts(){
+        for(let catKey in activeProducts){
+          const catGrid = categoryGrids[catKey];
+          catGrid.innerHTML = '';
+          activeProducts[catKey].forEach((p, idx) => {
+            const col = document.createElement('div');
+            col.className = 'card fade-up';
+            col.style.animationDelay = (parseFloat(catKey.replace('cat',''))*0.02 + 0.13 + idx * 0.03) + 's';
+            col.innerHTML = `
+              <img src="${p.img}" alt="${p.name}">
+              <div class="card-body">
+                <div class="info">
+                  <div class="name">${p.name}</div>
+                  <div class="meta">${p.desc || 'Kue spesial'}</div>
+                </div>
+                <div style="text-align:right">
+                  <div class="price">Rp ${formatPrice(p.price)}</div>
+                  <div style="display:flex;gap:6px;margin-top:6px">
+                    <button class="add" data-id="${p.id}">Tambah</button>
+                    <button class="detail-btn" data-id="${p.id}" title="Detail Produk">⋯</button>
+                  </div>
+                </div>
+              </div>
+            `;
+            catGrid.appendChild(col);
+          });
+        }
+
+        attachProductListeners();
+      }
+
+      // ===== FIXED attachProductListeners =====
+      function attachProductListeners(){
+        // Hapus event lama: cloneNode
+        document.querySelectorAll('.add').forEach(btn => {
+          const clone = btn.cloneNode(true);
+          btn.parentNode.replaceChild(clone, btn);
+        });
+        document.querySelectorAll('.detail-btn').forEach(btn => {
+          const clone = btn.cloneNode(true);
+          btn.parentNode.replaceChild(clone, btn);
+        });
+
+        document.querySelectorAll('.add').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            const id = e.currentTarget.dataset.id;
+            addToCart(id, 1);
+            openCart();
+          });
+        });
+
+        document.querySelectorAll('.detail-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            const id = e.currentTarget.dataset.id;
+            showDetailModal(id);
+          });
+        });
+      }
+
+      // ===== MODAL DETAIL PRODUK =====
+      function showDetailModal(productId){
+        const prod = findProduct(productId);
+        if(!prod) return;
+        
+        modalContent.innerHTML = `
+          <button class="close-modal" id="closeModalBtn">&times;</button>
+          <img src="${prod.img}" alt="${prod.name}" class="detail-img">
+          <h4>${prod.name}</h4>
+          <div class="badge">${prod.desc}</div>
+          <p class="detail-desc">${prod.detail}</p>
+          <div class="detail-weight">📦 ${prod.weight}</div>
+          <div class="detail-price">Rp ${formatPrice(prod.price)}</div>
+          <button class="add-modal" data-id="${prod.id}">Tambah ke Keranjang</button>
+        `;
+        
+        detailOverlay.classList.add('active');
+        detailOverlay.setAttribute('aria-hidden', 'false');
+
+        // Close button
+        document.getElementById('closeModalBtn').addEventListener('click', closeDetailModal);
+
+        // Add to cart button
+        document.querySelector('.add-modal').addEventListener('click', (e) => {
+          const id = e.target.dataset.id;
+          addToCart(id, 1);
+          closeDetailModal();
+          openCart();
+        });
+      }
+
+      function closeDetailModal(){
+        detailOverlay.classList.remove('active');
+        detailOverlay.setAttribute('aria-hidden', 'true');
+      }
+
+      // ===== UPDATE CART UI =====
+      function updateCartUI(){
+        const totalItems = cart.reduce((s,i)=>s+i.qty,0);
+        const totalPrice = cart.reduce((s,i)=>s+(i.qty * i.price),0);
+
+        cartCountEl.textContent = totalItems;
+        cartTotalItemsEl.textContent = totalItems;
+        cartTotalPriceEl.textContent = 'Rp ' + formatPrice(totalPrice);
+
+        cartList.innerHTML = '';
+        if(cart.length === 0){
+          cartList.innerHTML = '<div style="padding:14px;color:#666;text-align:center">Keranjang kosong. Tambahkan produk dari katalog.</div>';
+        } else {
+          cart.forEach(item => {
+            const node = document.createElement('div');
+            node.className = 'cart-item';
+            node.innerHTML = `
+              <img src="${item.img}" alt="${item.name}">
+              <div class="ci-info">
+                <div class="ci-name">${item.name}</div>
+                <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+                  <div class="ci-qty">
+                    <button class="qty-btn dec" data-id="${item.id}">−</button>
+                    <div style="min-width:26px;text-align:center">${item.qty}</div>
+                    <button class="qty-btn inc" data-id="${item.id}">+</button>
+                  </div>
+                  <button class="remove-btn" data-id="${item.id}">Hapus</button>
+                  <div style="margin-left:auto;font-weight:700">Rp ${formatPrice(item.price * item.qty)}</div>
+                </div>
+              </div>
+            `;
+            cartList.appendChild(node);
+          });
+
+          cartList.querySelectorAll('.dec').forEach(b=>{
+            b.addEventListener('click', (e)=> changeQty(e.currentTarget.dataset.id, -1));
+          });
+          cartList.querySelectorAll('.inc').forEach(b=>{
+            b.addEventListener('click', (e)=> changeQty(e.currentTarget.dataset.id, +1));
+          });
+          cartList.querySelectorAll('.remove-btn').forEach(b => {
+            b.addEventListener('click', (e) => {
+              const id = e.currentTarget.dataset.id;
+              cart = cart.filter(item => item.id !== id);
+              saveCart();
+            });
+          });
+        }
+      }
+
+      // ===== UPDATE FLOATING CART =====
+      function updateFloatingCart(){
+        const totalItems = cart.reduce((s,i)=>s+i.qty,0);
+        floatingCartCount.textContent = totalItems;
+      }
+
+      // ===== DRAWER CONTROL =====
+      function openCart(){
+        cartDrawer.classList.add('open');
+        cartDrawer.setAttribute('aria-hidden','false');
+      }
+
+      function closeCart(){
+        cartDrawer.classList.remove('open');
+        cartDrawer.setAttribute('aria-hidden','true');
+      }
+
+      // ===== WHATSAPP CHECKOUT =====
+      function checkoutViaWhatsApp(){
+        if(cart.length === 0){
+          alert('Keranjang Anda kosong. Tambahkan produk terlebih dahulu.');
+          return;
+        }
+
+        // Prompt untuk nama pembeli
+        const buyerName = prompt('Masukkan nama Anda:');
+        if(!buyerName || buyerName.trim() === ''){
+          alert('Nama tidak boleh kosong.');
+          return;
+        }
+
+        const lines = [];
+        lines.push(`Halo Mama Reza Cake & Cookies, saya ${buyerName} ingin memesan:`);
+        lines.push('');
+
+        let totalItems = 0;
+        let totalPrice = 0;
+
+        cart.forEach(it => {
+          lines.push(`- ${it.qty}x ${it.name}`);
+          totalItems += it.qty;
+          totalPrice += it.qty * it.price;
+        });
+
+        lines.push('');
+        lines.push(`Total Item: ${totalItems}`);
+        lines.push(`Total Harga: Rp ${formatPrice(totalPrice)}`);
+        lines.push('Mohon informasi ongkir ya, terima kasih');
+
+        const message = lines.join('\n');
+        const rawNumber = '0895391639541';
+        const intlNumber = rawNumber.replace(/^0+/, '62');
+        const url = `https://wa.me/${intlNumber}?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
+      }
+
+      // ===== INITIALIZE =====
+      renderProducts();
+      renderActiveProducts();
+      updateCartUI();
+      updateFloatingCart();
+
+      // ===== EVENT LISTENERS =====
+      openCartBtn.addEventListener('click', openCart);
+      closeCartBtn.addEventListener('click', closeCart);
+      floatingCartBtn.addEventListener('click', openCart);
+      checkoutBtn.addEventListener('click', checkoutViaWhatsApp);
+
+      addHeroBtn.addEventListener('click', ()=>{
+        addToCart('nastar-keju', 1);
+        openCart();
+      });
+
+      toCatalogBtn.addEventListener('click', ()=>{
+        document.querySelector('.catalog').scrollIntoView({behavior:'smooth'});
+      });
+
+      // ===== ABOUT US MODAL =====
+      aboutBtn.addEventListener('click', ()=>{
+        aboutOverlay.classList.add('active');
+        aboutOverlay.setAttribute('aria-hidden','false');
+      });
+
+      closeAboutBtn.addEventListener('click', ()=> {
+        aboutOverlay.classList.remove('active');
+        aboutOverlay.setAttribute('aria-hidden','true');
+      });
+
+      // Close about on outside click
+      aboutOverlay.addEventListener('click', (e) => {
+        if (e.target === aboutOverlay) {
+          aboutOverlay.classList.remove('active');
+          aboutOverlay.setAttribute('aria-hidden','true');
+        }
+      });
+
+      window.addEventListener('beforeunload', saveCart);
+
+      // Close modal on ESC
+      document.addEventListener('keydown', (e) => {
+        if(e.key === 'Escape') {
+          closeDetailModal();
+          aboutOverlay.classList.remove('active');
+          aboutOverlay.setAttribute('aria-hidden','true');
+        }
+      });
+
+      // Close modal on outside click
+      detailOverlay.addEventListener('click', (e) => {
+        if(e.target === detailOverlay) closeDetailModal();
+      });
+
+      // Close cart drawer on outside click
+      document.addEventListener('click', (e) => {
+        if (!cartDrawer.classList.contains('open')) return;
+        const within = cartDrawer.contains(e.target) || openCartBtn.contains(e.target) || floatingCartBtn.contains(e.target);
+        if (!within) closeCart();
+      });
+
+      // Expose for debugging
+      window.MRC = { products, activeProducts, cart, addToCart, changeQty, saveCart, loadCart };
+
+      document.getElementById('maps-trigger').addEventListener('click', function() {
+        const alamat = "Kp. Karangge, 003/007, Desa Bandulu, Kec. Anyar, Kab. Serang, Banten 42166";
+        const url = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(alamat);
+
+        // Membuka tab baru
+        window.open(url, '_blank');
+      });
+
+      // ===== HOW TO ORDER MODAL =====
+      const howToOrderBtn = document.getElementById('toHowToOrder');
+      const howToOrderOverlay = document.getElementById('howToOrderOverlay');
+      const closeHowToOrderBtn = document.getElementById('closeHowToOrderBtn');
+
+      howToOrderBtn.addEventListener('click', () => {
+        howToOrderOverlay.classList.add('active');
+        howToOrderOverlay.setAttribute('aria-hidden', 'false');
+      });
+
+      closeHowToOrderBtn.addEventListener('click', () => {
+        howToOrderOverlay.classList.remove('active');
+        howToOrderOverlay.setAttribute('aria-hidden', 'true');
+      });
+
+      // Close on outside click
+      howToOrderOverlay.addEventListener('click', (e) => {
+        if (e.target === howToOrderOverlay) {
+          howToOrderOverlay.classList.remove('active');
+          howToOrderOverlay.setAttribute('aria-hidden', 'true');
+        }
+      });
+
+      // Close with ESC key (sudah ada, tapi tambahkan ini)
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          howToOrderOverlay.classList.remove('active');
+          howToOrderOverlay.setAttribute('aria-hidden', 'true');
+        }
+      });
+
+    })();
+  </script>
+</body>
+</html>
