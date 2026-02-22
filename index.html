@@ -1357,38 +1357,43 @@
           alert('Keranjang Anda kosong. Tambahkan produk terlebih dahulu.');
           return;
         }
-
-        // Prompt untuk nama pembeli
+      
         const buyerName = prompt('Masukkan nama Anda:');
         if(!buyerName || buyerName.trim() === ''){
           alert('Nama tidak boleh kosong.');
           return;
         }
-
+      
         const lines = [];
-        lines.push(`Halo Mama Reza Cake & Cookies, saya ${buyerName} ingin memesan:`);
+        lines.push(`Halo Mama Reza Cake & Cookies, saya *${buyerName}* ingin memesan:`);
         lines.push('');
-
+      
         let totalItems = 0;
         let totalPrice = 0;
-
+      
         cart.forEach(it => {
-          lines.push(`- ${it.qty}x ${it.name}`);
+          lines.push(`- *${it.qty}x* ${it.name}`);
           totalItems += it.qty;
           totalPrice += it.qty * it.price;
         });
-
+      
         lines.push('');
-        lines.push(`Total Item: ${totalItems}`);
-        lines.push(`Total Harga: Rp ${formatPrice(totalPrice)}`);
-        lines.push('Mohon informasi ongkir ya, terima kasih');
-
+        lines.push(`*Total Item:* ${totalItems}`);
+        lines.push(`*Total Harga:* Rp ${formatPrice(totalPrice)}`);
+        lines.push('');
+        lines.push('Mohon informasi ongkir ya, terima kasih.');
+      
         const message = lines.join('\n');
         const rawNumber = '0895391639541';
         const intlNumber = rawNumber.replace(/^0+/, '62');
-        const url = `https://wa.me/${intlNumber}?text=${encodeURIComponent(message)}`;
-        window.open(url, '_blank');
+      
+        // Menggunakan api.whatsapp.com agar otomatis memicu buka aplikasi di HP
+        const url = `https://api.whatsapp.com{intlNumber}&text=${encodeURIComponent(message)}`;
+        
+        // Langsung arahkan lokasi window (lebih agresif membuka aplikasi dibanding _blank)
+        window.location.href = url;
       }
+
 
       // ===== INITIALIZE =====
       renderProducts();
@@ -1500,3 +1505,4 @@
 </body>
 
 </html>
+
