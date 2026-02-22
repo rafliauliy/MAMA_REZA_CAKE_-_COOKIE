@@ -1358,14 +1358,10 @@
           return;
         }
       
-        const buyerName = prompt('Masukkan nama Anda:');
-        if(!buyerName || buyerName.trim() === ''){
-          alert('Nama tidak boleh kosong.');
-          return;
-        }
-      
+        // Bagian prompt dihapus agar lebih seamless
         const lines = [];
-        lines.push(`Halo Mama Reza Cake & Cookies, saya *${buyerName}* ingin memesan:`);
+        // Menggunakan placeholder [Nama Anda] agar diisi manual oleh user di WA
+        lines.push(`Halo Mama Reza Cake & Cookies, saya *(Isi Nama Anda)* ingin memesan:`);
         lines.push('');
       
         let totalItems = 0;
@@ -1387,12 +1383,12 @@
         const rawNumber = '0895391639541';
         const intlNumber = rawNumber.replace(/^0+/, '62');
       
-        // Menggunakan api.whatsapp.com agar otomatis memicu buka aplikasi di HP
+        // Perbaikan URL: Tambahkan /send?phone= agar format link benar
         const url = `https://api.whatsapp.com{intlNumber}&text=${encodeURIComponent(message)}`;
         
-        // Langsung arahkan lokasi window (lebih agresif membuka aplikasi dibanding _blank)
         window.location.href = url;
       }
+
 
 
       // ===== INITIALIZE =====
@@ -1505,4 +1501,5 @@
 </body>
 
 </html>
+
 
