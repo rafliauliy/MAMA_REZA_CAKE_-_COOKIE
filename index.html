@@ -987,92 +987,95 @@
     (function(){
       // ===== PRODUCTS DATA (EDIT SECTION) =====
       const products = [
-         { id: 'nastar-keju-toples', name: 'Nastar Keju Toples Reguler (500gr)',
-          price: 40000, 
-          img: 'nastar_keju_toples.png', 
-          desc: 'Best Seller Hemat!', 
-          detail: 'Nastar dengan keju asli pilihan, tekstur lembut dan manis gurih yang sempurna. Cocok untuk hantaran Lebaran atau suguhan istimewa keluarga. Dibuat fresh setiap hari dengan bahan premium.', 
-          weight: '500gr / pack'
-        },
-        { id: 'nastar-keju',
-          name: 'Nastar Keju (500gr)',
-          price: 42000, 
-          img: 'nastar_keju.png', 
-          desc: 'Unggulan & Best Seller', 
-          detail: 'Nastar dengan keju asli pilihan, tekstur lembut dan manis gurih yang sempurna. Cocok untuk hantaran Lebaran atau suguhan istimewa keluarga. Dibuat fresh setiap hari dengan bahan premium.', 
-          weight: '500gr / pack'
-        },
         { 
-          id: 'kaasstengels', 
-          name: 'Kaasstengels (Kue Keju)',
-          price: 40000, 
-          img: 'kastengel.png', 
-          desc: 'Kue Keju',
-          detail: 'Kaasstengels renyah dengan keju premium yang gurih. Aroma keju autentik memikat di setiap gigitan. Sempurna sebagai camilan atau oleh-oleh spesial.',
-          weight: '250gr / pack'
-        },
-        { 
-          id: 'kue-semprit', 
-          name: 'Kue Semprit', 
-          price: 40000, 
-          img: 'semprit.png', 
-          desc: 'Favorit',
-          detail: 'Kue semprit klasik dengan aroma butter yang kaya dan tekstur ringan. Favorit anak-anak dan keluarga, cocok buat suguhan tamu atau hantaran.',
-          weight: '250gr / pack'
-        },
-        { 
-          id: 'kacang-goreng', 
-          name: 'Kacang Goreng', 
-          price: 35000, 
-          img: 'kacang_goreng.png', 
-          desc: 'Best Seller',
-          detail: 'Kacang goreng gurih dan renyah yang bikin nagih. Dibuat dengan resep tradisional dan bumbu pilihan. Camilan sempurna kapan saja.',
-          weight: '250gr / pack'
-        },
-        { 
-          id: 'jelly-kering', 
-          name: 'Jelly Kering', 
-          price: 40000, 
-          img: 'ager_kering.png', 
-          desc: 'Manis Segar',
-          detail: 'Jelly kering dengan warna-warni cerah dan rasa buah segar alami. Favorit anak-anak dan cocok untuk pesta. Aman dan lezat!',
-          weight: '220gr / pack'
-        },
-        { 
-          id: 'nastar-cokelat', 
-          name: 'Nastar Cokelat', 
-          price: 40000, 
-          img: 'nastar_cokelat.png', 
-          desc: 'Choco',
-          detail: 'Nastar dengan isi cokelat premium yang kaya rasa. Tekstur lembut dengan kelezatan cokelat yang melumer di mulut. Pilihan untuk penikmat cokelat.',
-          weight: '250gr / pack'
-        },
-        { 
-          id: 'putri-salju', 
-          name: 'Putri Salju', 
-          price: 40000, 
-          img: 'putri_salju.png', 
-          desc: 'Classic',
-          detail: 'Putri salju premium dengan tekstur lembut dan rasa manis yang pas. Bertabur gula halus yang indah. Kue klasik yang selalu jadi favorit.',
-          weight: '250gr / pack'
-        },
-        { 
-          id: 'kue-sagu-keju', 
-          name: 'Kue Sagu Keju', 
-          price: 40000, 
-          img: 'sagu_keju.png', 
-          desc: 'Special',
-          detail: 'Kue sagu keju dengan tekstur renyah dan gurih yang sempurna. Leleh di mulut dengan cita rasa keju asli. Kue spesial untuk momen istimewa.',
-          weight: '250gr / pack'
-        },
-        { 
+        id: 'nastar-keju-toples', 
+        name: 'Nastar Keju Toples Reguler (500gr)',
+        price: 40000, 
+        img: 'nastar_keju_toples.png', 
+        desc: 'Best Seller Hemat!', 
+        detail: 'Nastar dengan keju asli pilihan, tekstur lembut dan manis gurih yang sempurna. Cocok untuk hantaran Lebaran atau suguhan istimewa keluarga. Dibuat fresh setiap hari dengan bahan premium.', 
+        weight: '500gr / pack'
+      },
+      { 
+        id: 'nastar-keju',
+        name: 'Nastar Keju (500gr)',
+        price: 42000, 
+        img: 'nastar_keju.png', 
+        desc: 'Unggulan & Best Seller', 
+        detail: 'Nastar dengan keju asli pilihan, tekstur lembut dan manis gurih yang sempurna. Cocok untuk hantaran Lebaran atau suguhan istimewa keluarga. Dibuat fresh setiap hari dengan bahan premium.', 
+        weight: '500gr / pack'
+      },
+      { 
+        id: 'kaasstengels', 
+        name: 'Kaasstengels (Kue Keju) (500gr)',
+        price: 40000, 
+        img: 'kastengel.png', 
+        desc: 'Kue Keju',
+        detail: 'Kaasstengels renyah dengan keju premium yang gurih. Aroma keju autentik memikat di setiap gigitan. Sempurna sebagai camilan atau oleh-oleh spesial.',
+        weight: '500gr / pack'
+      },
+      { 
+        id: 'kue-semprit', 
+        name: 'Kue Semprit (500gr)', 
+        price: 40000, 
+        img: 'semprit.png', 
+        desc: 'Favorit',
+        detail: 'Kue semprit klasik dengan aroma butter yang kaya dan tekstur ringan. Favorit anak-anak dan keluarga, cocok buat suguhan tamu atau hantaran.',
+        weight: '500gr / pack'
+      },
+      { 
+        id: 'kacang-goreng', 
+        name: 'Kacang Goreng (500gr)', 
+        price: 35000, 
+        img: 'kacang_goreng.png', 
+        desc: 'Best Seller',
+        detail: 'Kacang goreng gurih dan renyah yang bikin nagih. Dibuat dengan resep tradisional dan bumbu pilihan. Camilan sempurna kapan saja.',
+        weight: '500gr / pack'
+      },
+      { 
+        id: 'jelly-kering', 
+        name: 'Jelly Kering (500gr)', 
+        price: 40000, 
+        img: 'ager_kering.png', 
+        desc: 'Manis Segar',
+        detail: 'Jelly kering dengan warna-warni cerah dan rasa buah segar alami. Favorit anak-anak dan cocok untuk pesta. Aman dan lezat!',
+        weight: '500gr / pack'
+      },
+      { 
+        id: 'nastar-cokelat', 
+        name: 'Nastar Cokelat (500gr)', 
+        price: 40000, 
+        img: 'nastar_cokelat.png', 
+        desc: 'Choco',
+        detail: 'Nastar dengan isi cokelat premium yang kaya rasa. Tekstur lembut dengan kelezatan cokelat yang melumer di mulut. Pilihan untuk penikmat cokelat.',
+        weight: '500gr / pack'
+      },
+      { 
+        id: 'putri-salju', 
+        name: 'Putri Salju (500gr)', 
+        price: 40000, 
+        img: 'putri_salju.png', 
+        desc: 'Classic',
+        detail: 'Putri salju premium dengan tekstur lembut dan rasa manis yang pas. Bertabur gula halus yang indah. Kue klasik yang selalu jadi favorit.',
+        weight: '500gr / pack'
+      },
+      { 
+        id: 'kue-sagu-keju', 
+        name: 'Kue Sagu Keju (500gr)', 
+        price: 40000, 
+        img: 'sagu_keju.png', 
+        desc: 'Special',
+        detail: 'Kue sagu keju dengan tekstur renyah dan gurih yang sempurna. Leleh di mulut dengan cita rasa keju asli. Kue spesial untuk momen istimewa.',
+        weight: '500gr / pack'
+      },
+      { 
         id: 'kue-kacang-jadul', 
-        name: 'Kue Kacang Jadul', 
+        name: 'Kue Kacang Jadul (500gr)', 
         price: 40000, 
         img: 'kue_kacang.png', 
         desc: 'Best Seller',
         detail: 'Kue kacang jadul berbentuk hati dengan taburan wijen di atasnya. Teksturnya lembut, lumer di mulut dengan rasa kacang yang khas dan legit. Cocok untuk suguhan Lebaran maupun teman minum teh bersama keluarga.',
-        weight: '250gr / pack'
+        weight: '500gr / pack'
       }
       ];
 
@@ -1539,6 +1542,7 @@
   </script>
 </body>
 </html>
+
 
 
 
